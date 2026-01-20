@@ -53,18 +53,19 @@ export default function PricingSection() {
               ))}
             </ul>
 
-            <button
-              type="button"
-              className={`w-full py-2.5 rounded-md font-medium mt-7 transition-all ${plan.mostPopular ? "bg-white text-pink-600 hover:bg-slate-200" : "bg-pink-500 hover:bg-pink-600"}`}
+            <a
+              href={`https://wa.me/${phoneNumber}?text=${message} ${plan.name}`}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <a
-                href={`https://wa.me/${phoneNumber}?text=${message} ${plan.name}`}
-                target="_blank"
-                rel="noopener noreferrer"
+              {" "}
+              <button
+                type="button"
+                className={`w-full py-2.5 rounded-md font-medium mt-7 transition-all ${plan.mostPopular ? "bg-white text-pink-600 hover:bg-slate-200" : "bg-pink-500 hover:bg-pink-600"}`}
               >
                 Elegir Plan
-              </a>
-            </button>
+              </button>{" "}
+            </a>
           </motion.div>
         ))}
       </div>
