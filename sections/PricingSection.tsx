@@ -6,6 +6,8 @@ import { CheckIcon } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function PricingSection() {
+  const phoneNumber = "5403883118692";
+  const message = "¡Hola SuperGYMAX! Quiero obtener el plan ";
   return (
     <div id="pricing" className="px-4 md:px-16 lg:px-24 xl:px-32">
       <SectionTitle
@@ -50,11 +52,18 @@ export default function PricingSection() {
                 </li>
               ))}
             </ul>
+
             <button
               type="button"
               className={`w-full py-2.5 rounded-md font-medium mt-7 transition-all ${plan.mostPopular ? "bg-white text-pink-600 hover:bg-slate-200" : "bg-pink-500 hover:bg-pink-600"}`}
             >
-              Elegir Plan
+              <a
+                href={`https://wa.me/${phoneNumber}?text=${message} ${plan.name}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Elegir Plan
+              </a>
             </button>
           </motion.div>
         ))}
