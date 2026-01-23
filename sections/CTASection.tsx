@@ -2,6 +2,10 @@
 import { motion } from "motion/react";
 
 export default function CTASection() {
+        const phoneNumber = "5403883118692";
+  const message =
+    "¡Hola SuperGYMAX! Quiero más información sobre los planes de entrenamiento.";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   return (
     <motion.div
       className="max-w-5xl py-16 mt-40 md:pl-20 md:w-full max-md:mx-4 md:mx-auto flex flex-col md:flex-row max-md:gap-6 items-center justify-between text-left bg-linear-to-b from-pink-900 to-pink-950 rounded-2xl p-6 text-white"
@@ -36,6 +40,7 @@ export default function CTASection() {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ type: "spring", stiffness: 280, damping: 70, mass: 1 }}
+        onClick={() => window.open(whatsappUrl, "_blank")}
       >
         Empezar Ahora
       </motion.button>

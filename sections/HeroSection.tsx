@@ -1,6 +1,6 @@
 "use client";
-import { CheckIcon, ChevronRightIcon, VideoIcon } from "lucide-react";
 import TiltedImage from "@/components/TiltImage";
+import { CheckIcon, ChevronRightIcon, VideoIcon } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function HeroSection() {
@@ -75,13 +75,13 @@ export default function HeroSection() {
       >
         <a
           href="#pricing"
-          className="bg-pink-600 hover:bg-pink-700 text-white rounded-full px-7 h-11 font-semibold flex items-center justify-center"
+          className="bg-pink-600 hover:bg-pink-700 text-white rounded-full px-7 h-11 font-semibold flex items-center justify-center max-md:text-center"
         >
           Inscribite Ahora
         </a>
         <a
           href="#features"
-          className="flex items-center gap-2 border border-pink-900 hover:bg-pink-950/50 transition rounded-full px-6 h-11"
+          className="flex items-center gap-2 border border-pink-900 hover:bg-pink-950/50 transition rounded-full px-6 h-11 "
         >
           <VideoIcon strokeWidth={1} />
           <span>Ver Instalaciones</span>

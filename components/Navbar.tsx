@@ -1,11 +1,11 @@
 "use client";
+import { navlinks } from "@/data/navlinks";
+import { INavLink } from "@/types";
 import { MenuIcon, XIcon } from "lucide-react";
+import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { motion } from "motion/react";
-import { navlinks } from "@/data/navlinks";
-import { INavLink } from "@/types";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +21,7 @@ export default function Navbar() {
       >
         <a href="/">
           <Image
-            className="h-10 w-auto"
+            className="h-15 w-auto"
             src="/assets/logo.png"
             alt="SuperGYMAX Logo"
             width={150}
